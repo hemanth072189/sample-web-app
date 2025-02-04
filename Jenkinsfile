@@ -15,12 +15,11 @@ pipeline {
         }
         stage('install dep') {
             steps {
-                sh 'sudo su'
-                sh 'yum update -y'
-                sh 'yum install -y httpd'
-                sh 'systemctl start httpd'
-                sh 'systemctl enable httpd'
-                sh 'cp index.html /var/www/html/index.html'
+                sh 'sudo yum update -y'
+                sh 'sudo yum install -y httpd'
+                sh 'sudo systemctl start httpd'
+                sh 'sudo systemctl enable httpd'
+                sh 'sudo cp index.html /var/www/html/index.html'
             }
         }  
         stage('status_app') {
