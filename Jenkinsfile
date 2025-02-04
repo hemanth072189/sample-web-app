@@ -14,6 +14,7 @@ pipeline {
         }
         stage('install dep') {
             steps {
+                sh 'sudo su'
                 sh 'yum update -y'
                 sh 'yum install -y httpd'
                 sh 'systemctl start httpd'
