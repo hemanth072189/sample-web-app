@@ -10,6 +10,7 @@ pipeline {
         stage('check_app') {
             steps {
                 sh 'cat index.html'
+                sh 'whoami'
             }
         }
         stage('install dep') {
