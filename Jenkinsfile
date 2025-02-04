@@ -12,7 +12,7 @@ pipeline {
                 sh 'cat index.html'
             }
         }
-        stage('install dep) {
+        stage('install dep') {
             steps {
                 sh 'sudo yum update -y'
                 sh 'sudo yum install -y httpd'
